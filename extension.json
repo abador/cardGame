@@ -1,0 +1,28 @@
+{
+	"name": "CardGame",
+	"author": "Fandom, Inc.",
+	"url": "https://https://github.com/abador/cardGame",
+	"description": "Card game hackathon project",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"manifest_version": 1,
+	"AutoloadNamespaces": {
+		"CardGame\\": "src"
+	},
+	"JobClasses": {
+		"PostRegistrationJob": "PostRegistrationJob::newInstance"
+	},
+	"SpecialPages": {
+		"Cards": "CardGame\\SpecialSignupRedirect"
+	},
+	"MessagesDirs": {
+		"CardGame": "i18n"
+	},
+	"ResourceModules": {
+		"ext.CardGame.preferences.messages": {
+			"messages": [
+				"random-message"
+			]
+		}
+	}
+}
