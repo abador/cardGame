@@ -43,6 +43,14 @@
 			"scripts": [
 				"ext.CardGame.popup.js"
 			]
+		},
+		"ext.CardGame.table.styles": {
+			"styles": {
+				"ext.CardGame.table.css": {}
+			},
+			"targets": [
+				"desktop"
+			]
 		}
 	}
 }
