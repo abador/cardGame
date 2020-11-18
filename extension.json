@@ -15,6 +15,9 @@
 	"Hooks": {
 		"BeforePageDisplay": "CardGame\\Hooks\\NewCardsHooks::onBeforePageDisplay"
 	},
+	"SpecialPages": {
+		"Cards": "CardGame\\Cards"
+	},
 	"MessagesDirs": {
 		"CardGame": "i18n"
 	},
