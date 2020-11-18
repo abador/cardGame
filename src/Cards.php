@@ -2,6 +2,7 @@
 
 namespace CardGame;
 
+use F;
 use MediaWiki\MediaWikiServices;
 use SpecialPage;
 use Wikimedia\Rdbms\IDatabase;
@@ -24,10 +25,13 @@ class Cards extends SpecialPage {
 
         $out = $this->getOutput();
 
-        $images = $this->getAllImages();
-        $userImages = $this->getUserImages( $userId, $images );
+        $userImages = $this->getUserImages( $userId );
+        $images = $this->getAllImages( $userImages );
 
-        $html = $this->generateContent();
+        $tmplData = [
+            'images' => $images
+        ];
+        $html = $this->generateContent( $tmplData );
         $out->addHTML( $html );
 
     }
@@ -50,7 +54,7 @@ class Cards extends SpecialPage {
      * @return array
      * @throws \ConfigException
      */
-    public function getAllImages(): array {
+    public function getAllImages( array $userImages ): array {
         $dbr = $this->getDbConnection();
         $res = $dbr->select(
             [ 'card_game.card' ],
@@ -62,36 +66,42 @@ class Cards extends SpecialPage {
 
         $images = [];
         foreach ( $res as $row ) {
+            $achived = false;
+            if ( in_array( $row->card_id, $userImages ) ) {
+                $achived = true;
+            }
             $images[] = [
                 'card_id' => $row->card_id,
                 'card_name' => $row->card_name,
                 'card_url' => $row->card_url,
                 'card_description' => $row->card_description,
                 'wiki_id' => $row->wiki_id,
+                'achived' => $achived,
             ];
         }
         return $images;
     }
 
-    public function getUserImages( int $userId, array $images ): array {
+    public function getUserImages( int $userId ): array {
         $dbr = $this->getDbConnection();
         $res = $dbr->select(
             [ 'card_game.card_owners' ],
-            [ '*' ],
+            [ 'card_id' ],
             [ 'user_id' => $userId ]
         );
 
         $images = [];
         foreach ( $res as $row ) {
-            $images[] = [
-                'card_id' => $row->card_id,
-                'user_id' => $row->user_id,
-            ];
+            $images[] = $row->card_id;
         }
         return $images;
     }
 
-    public function generateContent(): string {
-        return '';
+    public function generateContent( array $tmplData ): string {
+        return F::app()->renderPartial(
+            CardsTemplateService::class,
+            'table',
+            $tmplData
+        );
     }
 }
