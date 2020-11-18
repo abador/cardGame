@@ -3,6 +3,7 @@
 }
 
 td {
+    background-color: #ebebeb;
     border: 1px solid black;
 }
 
@@ -14,12 +15,15 @@ table {
 }
 
 #card-game-card-text-main {
+    font-family: "Tahoma", Geneva, sans-serif;
+    font-size: 115%;
     margin-top: 5px;
     text-align: center;
     font-weight: bold;
 }
 
 #card-game-card-text-description {
+    font-family: "Tahoma", Geneva, sans-serif;
     margin-top: 2px;
     text-align: center;
 }

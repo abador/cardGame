@@ -1,6 +1,6 @@
 <div class="cards-game-main-div">
 <h1>Welcome to your card collection!</h1><br>
-<p>This is description of this special page with special collection of a cards. Bla bla bla.</p><br>
+<p>This is description of this special page with special collection of a cards! It contain all cards that you can get when visiting our wikis. Visit more wikis to unlock more fluffy animals!</p><br>
 	<table width="250" border="0" cellpadding="2">
 	<?php $counter = 1; ?>
 		<?php foreach ( $images as $image ): ?>
