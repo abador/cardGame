@@ -12,16 +12,37 @@
 	"JobClasses": {
 		"PostRegistrationJob": "PostRegistrationJob::newInstance"
 	},
-	"SpecialPages": {
-		"Cards": "CardGame\\SpecialSignupRedirect"
+	"Hooks": {
+		"BeforePageDisplay": "CardGame\\Hooks\\NewCardsHooks::onBeforePageDisplay"
 	},
 	"MessagesDirs": {
 		"CardGame": "i18n"
 	},
+	"APIModules": {
+		"getcard": "CardGame\\Api\\ApiGetCard"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "CardGame/modules"
+	},
 	"ResourceModules": {
-		"ext.CardGame.preferences.messages": {
+		"ext.CardGame.messages": {
 			"messages": [
-				"random-message"
+				"found-a-card"
+			]
+		},
+		"ext.CardGame.popup.scripts": {
+			"scripts": {
+				"ext.CardGame.popup.js": {}
+			}
+		},
+		"ext.CardGame.popup.styles": {
+			"styles": {
+				"ext.CardGame.popup.css": {}
+			},
+			"targets": [
+				"desktop",
+				"mobile"
 			]
 		}
 	}
