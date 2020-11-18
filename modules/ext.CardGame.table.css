@@ -3,23 +3,27 @@
 }
 
 td {
+    background-color: #ebebeb;
     border: 1px solid black;
 }
 
 table {
-    border-spacing: 15px;
+    border-spacing: 25px;
     display: inline-block;
-    margin-left: 10%;
+    margin-left: 15%;
     float: top;
 }
 
 #card-game-card-text-main {
+    font-family: "Tahoma", Geneva, sans-serif;
+    font-size: 115%;
     margin-top: 5px;
     text-align: center;
     font-weight: bold;
 }
 
 #card-game-card-text-description {
+    font-family: "Tahoma", Geneva, sans-serif;
     margin-top: 2px;
     text-align: center;
 }
