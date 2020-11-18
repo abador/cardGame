@@ -13,7 +13,7 @@
 		"PostRegistrationJob": "PostRegistrationJob::newInstance"
 	},
 	"SpecialPages": {
-		"Cards": "CardGame\\SpecialSignupRedirect"
+		"Cards": "CardGame\\Cards"
 	},
 	"MessagesDirs": {
 		"CardGame": "i18n"
