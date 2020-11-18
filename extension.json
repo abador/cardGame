@@ -13,7 +13,8 @@
 		"PostRegistrationJob": "PostRegistrationJob::newInstance"
 	},
 	"Hooks": {
-		"BeforePageDisplay": "CardGame\\Hooks\\NewCardsHooks::onBeforePageDisplay"
+		"BeforePageDisplay": "CardGame\\Hooks\\NewCardsHooks::onBeforePageDisplay",
+		"SkinAfterContent": "CardGame\\Hooks\\NewCardsHooks::onSkinAfterContent"
 	},
 	"SpecialPages": {
 		"Cards": "CardGame\\Cards"
@@ -34,18 +35,13 @@
 				"found-a-card"
 			]
 		},
-		"ext.CardGame.popup.scripts": {
-			"scripts": {
-				"ext.CardGame.popup.js": {}
-			}
-		},
 		"ext.CardGame.popup.styles": {
-			"styles": {
-				"ext.CardGame.popup.css": {}
-			},
-			"targets": [
-				"desktop",
-				"mobile"
+			"class": "SassAwareResourceLoaderFileModule",
+			"styles": ["ext.CardGame.popup.scss"]
+		},
+		"ext.CardGame.popup.scripts": {
+			"scripts": [
+				"ext.CardGame.popup.js"
 			]
 		}
 	}
