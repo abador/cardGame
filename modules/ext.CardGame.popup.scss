@@ -4,7 +4,7 @@
 	bottom: 25px;
 	border-color: #0c0c0c;
 	right: 0;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	position: fixed;
 	width: 100%;
@@ -12,11 +12,23 @@
 
 	&__wrapper {
 		width: 100%;
+		background: #bed1cf;
+		border: solid;
+		border-color: $wds-color-link;
+		margin: 0 0 auto auto !important;
 	}
 
 	&__title {
 		font-family: $wds-fandom-font-family;
 		font-weight: $wds-font-weight-bold;
+	}
+
+	&__icon {
+		width: 50px;
+	}
+
+	&__card {
+		height: 150px;
 	}
 
 	&__content {
@@ -34,5 +46,9 @@
 
 	.wds-button-red {
 		background-color: red !important;
+	}
+
+	.wds-button-disabled {
+		background-color: grey !important;
 	}
 }

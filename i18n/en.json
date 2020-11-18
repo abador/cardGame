@@ -2,6 +2,7 @@
     "@metadata": {
         "authors": []
     },
-    "found-a-card-title": "Congrats! You found a card!",
-    "found-a-card": "You found a card! You can see all collectibles [[Special:Cards|here]]."
+    "found-a-card-title": "Congrats! You found a \"$1\" card!",
+    "found-a-card": "Click COLLECT and you can see all collectibles [[Special:Cards|here]].",
+    "found-a-card-collected": "Card collected! Visit [[Special:Cards|Special:Cards]] page to see what you have"
 }

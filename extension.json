@@ -32,7 +32,9 @@
 	"ResourceModules": {
 		"ext.CardGame.messages": {
 			"messages": [
-				"found-a-card"
+				"found-a-card",
+				"found-a-card-title",
+				"found-a-card-collected"
 			]
 		},
 		"ext.CardGame.popup.styles": {
