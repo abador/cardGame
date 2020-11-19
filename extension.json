@@ -51,6 +51,11 @@
 			"targets": [
 				"desktop"
 			]
+		},
+		"ext.CardGame.table.scripts": {
+			"scripts": [
+				"ext.CardGame.table.js"
+			]
 		}
 	}
 }
