@@ -34,6 +34,10 @@
 			"class": "SassAwareResourceLoaderFileModule",
 			"styles": ["ext.CardGame.popup.scss"]
 		},
+		"ext.CardGame.trade.styles": {
+			"class": "SassAwareResourceLoaderFileModule",
+			"styles": ["ext.CardGame.trade.scss"]
+		},
 		"ext.CardGame.popup.scripts": {
 			"scripts": [
 				"ext.CardGame.popup.js"

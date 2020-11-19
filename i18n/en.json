@@ -4,5 +4,6 @@
     },
     "found-a-card-title": "Congrats! You found a \"$1\" card!",
     "found-a-card": "Click COLLECT! And get this card for FREE!",
-    "found-a-card-collected": "Card collected! Visit [[Special:Cards]] page to see what you have"
+    "found-a-card-collected": "Card collected! Visit [[Special:Cards]] page to see what you have",
+    "trade-completed": "Trade completed! Visit [[Special:Cards]] page to see what you still have"
 }

@@ -1,0 +1,35 @@
+@import '~design-system/dist/scss/wds-variables/index';
+
+.card-trade-step {
+	max-width: 2000px;
+	padding: 10px;
+	display: inline-block;
+	vertical-align:middle;
+	&__image {
+		border-color: #FFFFFF;
+		border-radius: 50%;
+		border-style: solid;
+		border-width: 6px;
+		height: 138px;
+		object-fit: cover;
+		width: 138px;
+	}
+	&__arrow {
+		width: 120px;
+	}
+	&__trade {
+		width: 120px;
+	}
+	&__actions {
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+}
+
+.card-trade-steps {
+	overflow: auto;
+	text-align: center;
+}
+
+
