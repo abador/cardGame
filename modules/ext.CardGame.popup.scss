@@ -30,6 +30,7 @@
 
 	&__card {
 		height: 150px;
+		margin-right: 10px;
 	}
 
 	&__content {
@@ -43,6 +44,10 @@
 
 	&__close-wiki-dialog-footer {
 		margin-right: 10px;
+	}
+
+	&__button-margin {
+		margin-right: 10px !important;
 	}
 
 	.wds-button-red {

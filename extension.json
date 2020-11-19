@@ -30,13 +30,6 @@
 		"remoteExtPath": "CardGame/modules"
 	},
 	"ResourceModules": {
-		"ext.CardGame.messages": {
-			"messages": [
-				"found-a-card",
-				"found-a-card-title",
-				"found-a-card-collected"
-			]
-		},
 		"ext.CardGame.popup.styles": {
 			"class": "SassAwareResourceLoaderFileModule",
 			"styles": ["ext.CardGame.popup.scss"]
@@ -44,6 +37,11 @@
 		"ext.CardGame.popup.scripts": {
 			"scripts": [
 				"ext.CardGame.popup.js"
+			],
+			"messages": [
+				"found-a-card",
+				"found-a-card-title",
+				"found-a-card-collected"
 			]
 		},
 		"ext.CardGame.table.styles": {

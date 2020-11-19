@@ -112,10 +112,18 @@ class NewCardsHooks {
 					</div>
 					<div 
 					class="wds-dialog__content card-game-dialog__content confirmation-dialog__close-wiki-dialog-footer">
-						<img class="card-game-dialog__card" src="' . $card['card_url'] . '">' . wfMessage( 'found-a-card' ) . '
+						<img class="card-game-dialog__card" src="' . $card['card_url'] . '">
+						'
+				 		. wfMessage( 'found-a-card' ) . '
 					</div>
 					<div class="wds-dialog__actions card-game-dialog__actions">
-						<button id="collectCard" class="wds-button wds-button-red" data-id="' . $card['card_id'] . '">
+						<div id="cardCollected" class="card-game-dialog__button-margin" style="display:none">
+						'. wfMessage( 'found-a-card-collected' ) .'</div>
+						<button id="closeCardPopup" class="wds-button card-game-dialog__button-margin">
+							Close
+						</button>
+						<button id="collectCard" class="wds-button wds-button-red card-game-dialog__button-margin" 
+						data-id="' . $card['card_id'] . '">
 							Collect
 						</button>
 					</div>
