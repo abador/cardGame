@@ -15,3 +15,16 @@
 		<?php endforeach ?>
 	</div>
 </div>
+
+
+<div class="card-game-details-dialog" >
+	<div class="wds-dialog__wrapper card-game-details-dialog__wrapper">
+		<div class="wds-dialog__title card-game-dialog__title"> </div>
+		<div class="wds-dialog__content card-game-dialog__content confirmation-dialog__close-wiki-dialog-footer">
+			<img id="popup-image" class="card-game-dialog__card" src="' . $image['card_url'] . '">
+		</div>
+		<div class="wds-dialog__actions card-game-dialog__actions">
+			<button id="closeCardPopupDetails" class="wds-button card-game-dialog__button-margin">Close</button>
+		</div>
+	</div>
+</div>
