@@ -6,8 +6,13 @@
     filter: blur(5px);
 }
 
+.card-game-image:hover {
+    transform: scale(1.1);
+}
+
 .card-game-blurred-image:hover{
     filter: blur(2px);
+    transform: scale(1.1);
 }
 
 .cards-game-td {

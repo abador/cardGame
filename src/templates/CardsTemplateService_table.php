@@ -5,7 +5,7 @@
 		<?php foreach ( $images as $image ): ?>
 			<div class="cards-game-td" >
 				<? if ( $image['achived'] ) : ?>
-					<img src="<?= $image['card_url']; ?>" width="200"/>
+					<img class="card-game-image" src="<?= $image['card_url']; ?>" width="200"/>
 				<? else: ?>
 					<img class="card-game-blurred-image" src="<?= $image['card_url']; ?>" width="200"/>
 				<? endif; ?>
