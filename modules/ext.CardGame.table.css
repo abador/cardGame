@@ -1,17 +1,20 @@
+.cards-game-main-div {
+    margin-left: 80px;
+}
+
 .card-game-blurred-image{
     filter: blur(5px);
 }
 
-td {
-    background-color: #ebebeb;
-    border: 1px solid black;
+.card-game-blurred-image:hover{
+    filter: blur(2px);
 }
 
-table {
-    border-spacing: 25px;
+.cards-game-td {
+    margin: 5px;
+    background-color: #ebebeb;
+    width: 200px;
     display: inline-block;
-    margin-left: 15%;
-    float: top;
 }
 
 #card-game-card-text-main {

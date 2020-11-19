@@ -1,25 +1,17 @@
-<div class="cards-game-main-div">
+<div>
 <h1>Welcome to your card collection!</h1><br>
-<p>This is description of this special page with special collection of a cards. Bla bla bla.</p><br>
-	<table width="250" border="0" cellpadding="2">
-	<?php $counter = 1; ?>
+<p>This is description of this special page with special collection of a cards. Visit more wikis to unlock more fluffy animals!</p><br>
+	<div class="cards-game-main-div">
 		<?php foreach ( $images as $image ): ?>
-				<? if ( $counter % 4 === 0 ) : ?>
-					<tr>
+			<div class="cards-game-td" >
+				<? if ( $image['achived'] ) : ?>
+					<img src="<?= $image['card_url']; ?>" width="200"/>
+				<? else: ?>
+					<img class="card-game-blurred-image" src="<?= $image['card_url']; ?>" width="200"/>
 				<? endif; ?>
-				<td class="cards-game-td" align="center" valign="center">
-					<? if ( $image['achived'] ) : ?>
-						<img src="<?= $image['card_url']; ?>" width="200"/>
-					<? else: ?>
-						<img class="card-game-blurred-image" src="<?= $image['card_url']; ?>" width="200"/>
-					<? endif; ?>
-					<p id="card-game-card-text-main"><?= Sanitizer::encodeAttribute( $image['card_name'] ) ?></p>
-					<p id="card-game-card-text-description"><?= Sanitizer::encodeAttribute( $image['card_description'] ) ?></p>
-				</td>
-				<? if ( $counter % 3 === 0 ) : ?>
-					</tr>
-				<? endif; ?>
-				<?php $counter += 1; ?>
-			<?php endforeach ?>
-	</table>
+				<p id="card-game-card-text-main"><?= Sanitizer::encodeAttribute( $image['card_name'] ) ?></p>
+				<p id="card-game-card-text-description"><?= Sanitizer::encodeAttribute( $image['card_description'] ) ?></p>
+			</div>
+		<?php endforeach ?>
+	</div>
 </div>
