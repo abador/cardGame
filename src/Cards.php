@@ -38,8 +38,6 @@ class Cards extends SpecialPage {
 			default:
 				$this->showCardList();
 		}
-
-
     }
 
 	public function tradeWithUser() {
@@ -82,8 +80,10 @@ class Cards extends SpecialPage {
 		$avatarProvider = FandomServices::getUserAvatarProvider();
 		$cardId = $this->getRequest()->getVal( 'card' );
 		$targetUser = User::newFromName( $this->getRequest()->getVal( 'user' ) );
-		$targetUser->load();
-		if ( !is_null( $targetUser ) && $targetUser->getId() != 0 ) {
+		if ( $targetUser ) {
+			$targetUser->load();
+		}
+		if ( $targetUser && $targetUser->getId() != 0 ) {
 			$avatars[] = $targetUser->getId();
 		}
 		$out = $this->getOutput();
@@ -106,6 +106,8 @@ class Cards extends SpecialPage {
 		$userId = $user->mId;
 
 		$out = $this->getOutput();
+		$out->addModuleStyles( 'ext.CardGame.table.styles' );
+		$out->addModules( 'ext.CardGame.table.scripts' );
 
 		$userImages = $this->getUserImages( $userId );
 		$images = $this->getAllImages( $userImages );
@@ -217,7 +219,7 @@ class Cards extends SpecialPage {
 	}
 
 	public function generateTradePage( array $tmplData ): string {
-		if ( is_null($tmplData['target']) || $tmplData['target']->getId() == 0 ) {
+		if ( !$tmplData['target'] || $tmplData['target']->getId() == 0 ) {
 			return F::app()->renderPartial(
 				CardsTemplateService::class,
 				'nouser',

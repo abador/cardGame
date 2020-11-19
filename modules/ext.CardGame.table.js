@@ -1,5 +1,7 @@
+console.log(mw.config.get( 'wgServer'));
 $( document ).ready(function() {
-    $("img").click(function() {
+    $(".card-game-image, .card-game-blurred-image").click(function() {
+        $("#tradeCard").val($(this).data('id'));
         $(".card-game-details-dialog").show();
 
         let currentURL = $(this).attr('src');
@@ -9,5 +11,9 @@ $( document ).ready(function() {
 
     $("#closeCardPopupDetails").click(function() {
         $(".card-game-details-dialog").hide();
+    });
+
+    $("#tradeCard").click(function() {
+        location.href = mw.config.get( 'wgServer') + "/wiki/Special:Cards/Trade?card=" + $(this).val();
     });
 });

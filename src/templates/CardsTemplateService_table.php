@@ -5,7 +5,8 @@
 		<?php foreach ( $images as $image ): ?>
 			<div class="cards-game-td" >
 				<? if ( $image['achived'] ) : ?>
-					<img class="card-game-image" src="<?= $image['card_url']; ?>" width="200"/>
+					<img data-id="<?= $image['card_id']; ?>" class="card-game-image" src="<?= $image['card_url']; ?>"
+						 width="200"/>
 				<? else: ?>
 					<img class="card-game-blurred-image" src="<?= $image['card_url']; ?>" width="200"/>
 				<? endif; ?>
@@ -24,6 +25,7 @@
 			<img id="popup-image" class="card-game-dialog__card" src="' . $image['card_url'] . '">
 		</div>
 		<div class="wds-dialog__actions card-game-dialog__actions">
+			<button id="tradeCard" value="" class="wds-button card-game-dialog__button-margin">Trade</button>
 			<button id="closeCardPopupDetails" class="wds-button card-game-dialog__button-margin">Close</button>
 		</div>
 	</div>

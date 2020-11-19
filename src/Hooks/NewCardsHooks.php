@@ -83,10 +83,6 @@ class NewCardsHooks {
 	}
 
 	public static function onBeforePageDisplay( OutputPage $out, Skin $skin ) {
-        global $wgTitle;
-        if ( !is_null( $wgTitle ) && $wgTitle->isSpecial( 'Cards' ) ) {
-            $out->addModuleStyles( 'ext.CardGame.table.styles' );
-        }
         if ( !self::cardFound( $out ) ) {
         	return true;
 		}
